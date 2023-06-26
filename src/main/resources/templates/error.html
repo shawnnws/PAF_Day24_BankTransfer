@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+# Inject errorMessage object as we want to display the error message info.
+<body th:object="{errorMessage}">
+
+    # Define the attributes of errorMessage that we want to display.
+    <label for="statusCode">Status Code</label>
+    <span th:text="${errorMessage.statusCode}"></span>
+    <br/>
+
+    <label for="statusCode">Timestamp of Occurrence</label>
+    <span th:text="${errorMessage.timeStamp}"></span>
+    <br/>
+
+    <label for="statusCode">Error Message</label>
+    <span th:text="${errorMessage.message}"></span>
+    <br/>
+
+    <label for="statusCode">Error Description</label>
+    <span th:text="${errorMessage.description}"></span>
+    <br/>
+    
+</body>
+</html>
